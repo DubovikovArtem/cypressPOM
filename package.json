@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/DubovikovArtem/cypressPOM#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "cypress": "^13.5.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }

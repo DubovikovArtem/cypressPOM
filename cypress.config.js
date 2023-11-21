@@ -10,7 +10,6 @@ module.exports = defineConfig({
   viewportHeight: 1200,
   viewportWidth: 1600,
   e2e: {
-    baseUrl: "https://youtube.com/",
     retries: {
       openMode: 1,
       runMode: 0
@@ -18,5 +17,16 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    env:{
+      // username1: process.env.USERNAME,
+      // password1: process.env.PASSWORD,
+      username: "xqweAS12123",
+      password: "xqweAS12sadsd",
+      baseUrl:{
+        ui: 'https://bookcart.azurewebsites.net',
+        apiRegistration: 'https://bookcart.azurewebsites.net/api/User',
+        apiLogin: 'https://bookcart.azurewebsites.net/api/Login'
+      }
+    }
   },
 });
