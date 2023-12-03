@@ -34,6 +34,7 @@ export function userLogin() {
         expect(response.status).to.eq(200);
         cy.log('response:', response.body);
         cy.log('userId:', userId);
+        cy.log('token:', token);
     });
 }
 
