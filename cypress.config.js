@@ -25,7 +25,8 @@ module.exports = defineConfig({
       baseUrl:{
         ui: 'https://bookcart.azurewebsites.net',
         apiRegistration: 'https://bookcart.azurewebsites.net/api/User',
-        apiLogin: 'https://bookcart.azurewebsites.net/api/Login'
+        apiLogin: 'https://bookcart.azurewebsites.net/api/Login',
+        apiCreateWishlist: '/api/Wishlist/ToggleWishlist/{userId}/{bookId}'
       }
     }
   },

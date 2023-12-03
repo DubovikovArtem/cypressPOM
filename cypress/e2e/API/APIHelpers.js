@@ -19,6 +19,7 @@ export function userRegistration() {
     });
 }
 export let token;
+export let userId;
 export function userLogin() {
     cy.request({
         method: 'POST',
@@ -29,8 +30,10 @@ export function userLogin() {
         }
     }).then((response) => {
         token = response.body.token;
+        userId = response.body.userDetails.userId;
         expect(response.status).to.eq(200);
         cy.log('response:', response.body);
+        cy.log('userId:', userId);
     });
 }
 
