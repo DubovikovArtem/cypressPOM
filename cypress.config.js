@@ -17,17 +17,24 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    env:{
+    env: {
       // username1: process.env.USERNAME,
       // password1: process.env.PASSWORD,
       username: "xqweAS12123",
       password: "xqweAS12sadsd",
-      baseUrl:{
+      baseUrl: {
         ui: 'https://bookcart.azurewebsites.net',
         apiRegistration: 'https://bookcart.azurewebsites.net/api/User',
         apiLogin: 'https://bookcart.azurewebsites.net/api/Login',
         apiCreateWishlist: '/api/Wishlist/ToggleWishlist/{userId}/{bookId}'
       }
-    }
+    },
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/results',
+      overwrite: false,
+      html: true,
+      json: true,
+    },
   },
 });

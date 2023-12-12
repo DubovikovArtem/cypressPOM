@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-12T15:26:27.279Z",
+    "end": "2023-12-12T15:26:41.726Z",
+    "duration": 14447,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f0ccd0a-616e-4b0a-b85a-a8ae397cc676",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginTest\\login.cy.js",
+      "file": "cypress\\e2e\\loginTest\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c72a3ae-e9e4-4d42-b257-bd17b25ff8e3",
+          "title": "Login as user",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test user login",
+              "fullTitle": "Login as user test user login",
+              "timedOut": null,
+              "duration": 4974,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _APIHelpers.userLogin)();\ncy.visit(Cypress.env('baseUrl').ui, {\n  onBeforeLoad: contentWindow => {\n    contentWindow.window.localStorage.setItem('authToken', _APIHelpers.token);\n  }\n});\n/**почему то это не работает \n * результат \"СЕРЫЙ ЭКРАН\"\n * visitWithToken(Cypress.env('baseUrl').ui, token);\n */\nlet mainPage = new _mainPage.MainPage();\nmainPage.isLogged(Cypress.env('username'));",
+              "err": {},
+              "uuid": "6422a31a-95e9-47a4-95d8-4c3572045d0f",
+              "parentUUID": "1c72a3ae-e9e4-4d42-b257-bd17b25ff8e3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6422a31a-95e9-47a4-95d8-4c3572045d0f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
