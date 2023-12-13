@@ -11,7 +11,7 @@
     "cy:ran": "npm run generate:report && npx cypress run",
     "cy:ran:use_report": "npx cypress run --reporter mochawesome",
     "cy:open": "npx cypress open",
-    "generate:report":"npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json"
+    "generate:report": "npx mochawesome-merge cypress/results/*.json > mochawesome.json && npx marge mochawesome.json"
   },
   "repository": {
     "type": "git",
