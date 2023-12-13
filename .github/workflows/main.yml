@@ -25,7 +25,7 @@ jobs:
             path: mochawesome-report
             name: Test report
         if: failure()||success()
-      - name: Get report
+      - name: Save report
         uses: actions/upload-artifact@v3
         with:
             name: Test report
